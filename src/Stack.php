@@ -63,10 +63,16 @@ class Stack
     }
 
     /**
+     * @param bool $latestFirst
      * @return \Slab\Components\BundleInterface[]
      */
-    public function getBundles()
+    public function getBundles($latestFirst = false)
     {
+        if ($latestFirst)
+        {
+            return array_reverse($this->bundles);
+        }
+
         return $this->bundles;
     }
 
