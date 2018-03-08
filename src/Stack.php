@@ -33,6 +33,7 @@ class Stack
     /**
      * Stack constructor.
      * @param \Slab\Components\BundleInterface $mainBundle
+     * @throws \Exception
      */
     public function __construct(\Slab\Components\BundleInterface $mainBundle)
     {
@@ -59,6 +60,14 @@ class Stack
         $this->directories = new Cache\Directories($this->bundles, $this->searchOrder);
 
         return $this;
+    }
+
+    /**
+     * @return \Slab\Components\BundleInterface[]
+     */
+    public function getBundles()
+    {
+        return $this->bundles;
     }
 
     /**
