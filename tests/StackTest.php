@@ -16,7 +16,7 @@ class StackTest extends \PHPUnit\Framework\TestCase
     private $stack;
 
     /**
-     * setup
+     * @throws \Exception
      */
     public function setUp()
     {

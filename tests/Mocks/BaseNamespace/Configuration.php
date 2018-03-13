@@ -11,14 +11,6 @@ namespace Slab\Tests\Bundle\Mocks\BaseNamespace;
 class Configuration implements \Slab\Components\BundleInterface
 {
     /**
-     * BundleInterface constructor.
-     */
-    public function __construct($namespace)
-    {
-
-    }
-
-    /**
      * @return string
      */
     public function getSourceDirectory()
@@ -64,5 +56,65 @@ class Configuration implements \Slab\Components\BundleInterface
     public function getNamespace()
     {
         return dirname(get_called_class());
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface|null
+     */
+    public function getLogger()
+    {
+        return null;
+    }
+
+    /**
+     * @return null
+     */
+    public function getInputManager()
+    {
+        return null;
+    }
+
+    /**
+     * @return null
+     */
+    public function getConfigurationManager()
+    {
+        return null;
+    }
+
+    /**
+     * @param \Slab\Components\SystemInterface $system
+     * @return null|\Slab\Components\Router\RouterInterface
+     */
+    public function getRouter(\Slab\Components\SystemInterface $system)
+    {
+        return null;
+    }
+
+    /**
+     * @param \Slab\Components\SystemInterface $system
+     * @return null|\Slab\Components\Database\ProviderInterface
+     */
+    public function getDatabaseProvider(\Slab\Components\SystemInterface $system)
+    {
+        return null;
+    }
+
+    /**
+     * @param \Slab\Components\SystemInterface $system
+     * @return null|\SessionHandlerInterface
+     */
+    public function getSessionHandler(\Slab\Components\SystemInterface $system)
+    {
+        return null;
+    }
+
+    /**
+     * @param \Slab\Components\SystemInterface $system
+     * @return null|\Slab\Components\Cache\ProviderInterface
+     */
+    public function getCacheProvider(\Slab\Components\SystemInterface $system)
+    {
+        return null;
     }
 }
