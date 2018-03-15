@@ -8,7 +8,7 @@
  */
 namespace Slab\Bundle;
 
-class Stack
+class Stack implements \Slab\Components\BundleStackInterface
 {
     /**
      * @var \Slab\Components\BundleInterface[]

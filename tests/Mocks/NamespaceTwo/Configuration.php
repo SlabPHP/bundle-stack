@@ -11,14 +11,6 @@ namespace Slab\Tests\Bundle\Mocks\NamespaceTwo;
 class Configuration implements \Slab\Components\BundleInterface
 {
     /**
-     * BundleInterface constructor.
-     */
-    public function __construct($namespace)
-    {
-
-    }
-
-    /**
      * @return string
      */
     public function getSourceDirectory()

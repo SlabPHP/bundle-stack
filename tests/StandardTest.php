@@ -16,7 +16,7 @@ class StandardTest extends \PHPUnit\Framework\TestCase
     public function testStandardConfiguration()
     {
         $bundle = new Mocks\Standard();
-        $system = new Mocks\System();
+        $system = new \Slab\Tests\Components\Mocks\System();
 
         $this->assertEquals('Slab\Tests\Bundle\Mocks', $bundle->getNamespace());
 

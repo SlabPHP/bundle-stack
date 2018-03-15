@@ -20,9 +20,9 @@ class StackTest extends \PHPUnit\Framework\TestCase
      */
     public function setUp()
     {
-        $bundleBase = new \Slab\Tests\Bundle\Mocks\BaseNamespace\Configuration('asdf');
-        $bundleTwo = new \Slab\Tests\Bundle\Mocks\NamespaceTwo\Configuration('asdf2');
-        $bundleThree = new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration('asdf3');
+        $bundleBase = new \Slab\Tests\Bundle\Mocks\BaseNamespace\Configuration();
+        $bundleTwo = new \Slab\Tests\Bundle\Mocks\NamespaceTwo\Configuration();
+        $bundleThree = new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration();
 
         $this->stack = new \Slab\Bundle\Stack($bundleBase);
 
@@ -59,7 +59,7 @@ class StackTest extends \PHPUnit\Framework\TestCase
      */
     public function testDuplicate()
     {
-        $bundleThree = new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration('asdf3');
+        $bundleThree = new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration();
         $this->stack->pushBundle($bundleThree);
     }
 }
