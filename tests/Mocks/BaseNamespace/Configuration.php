@@ -75,9 +75,10 @@ class Configuration implements \Slab\Components\BundleInterface
     }
 
     /**
+     * @param \Slab\Components\SystemInterface $system
      * @return null
      */
-    public function getConfigurationManager()
+    public function getConfigurationManager(\Slab\Components\SystemInterface $system)
     {
         return null;
     }

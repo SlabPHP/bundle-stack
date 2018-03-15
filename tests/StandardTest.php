@@ -30,7 +30,7 @@ class StandardTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($slabDir . DIRECTORY_SEPARATOR . 'resources', $bundle->getResourceDirectory());
 
         $this->assertNull($bundle->getInputManager());
-        $this->assertNull($bundle->getConfigurationManager());
+        $this->assertNull($bundle->getConfigurationManager($system));
         $this->assertNull($bundle->getCacheProvider($system));
         $this->assertNull($bundle->getLogger());
         $this->assertNull($bundle->getSessionHandler($system));

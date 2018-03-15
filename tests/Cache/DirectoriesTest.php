@@ -16,9 +16,9 @@ class DirectoriesTest extends \PHPUnit\Framework\TestCase
     public function testDirectoriesCache()
     {
         $bundles = [
-            '\Slab\Tests\Bundle\Mocks\BaseNamespace' => new \Slab\Tests\Bundle\Mocks\BaseNamespace\Configuration('asdf'),
-            '\Slab\Tests\Bundle\Mocks\NamespaceTwo' => new \Slab\Tests\Bundle\Mocks\NamespaceTwo\Configuration('asdf2'),
-            '\Slab\Tests\Bundle\Mocks\NamespaceCharlie' => new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration('asdf3')
+            '\Slab\Tests\Bundle\Mocks\BaseNamespace' => new \Slab\Tests\Bundle\Mocks\BaseNamespace\Configuration(),
+            '\Slab\Tests\Bundle\Mocks\NamespaceTwo' => new \Slab\Tests\Bundle\Mocks\NamespaceTwo\Configuration(),
+            '\Slab\Tests\Bundle\Mocks\NamespaceCharlie' => new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration()
         ];
 
         $order = [
