@@ -31,16 +31,6 @@ class Stack implements \Slab\Components\BundleStackInterface
     private $directories;
 
     /**
-     * Stack constructor.
-     * @param \Slab\Components\BundleInterface $mainBundle
-     * @throws \Exception
-     */
-    public function __construct(\Slab\Components\BundleInterface $mainBundle)
-    {
-        $this->pushBundle($mainBundle);
-    }
-
-    /**
      * @param \Slab\Components\BundleInterface $bundle
      * @return $this
      * @throws \Exception

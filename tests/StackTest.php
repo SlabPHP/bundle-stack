@@ -24,9 +24,10 @@ class StackTest extends \PHPUnit\Framework\TestCase
         $bundleTwo = new \Slab\Tests\Bundle\Mocks\NamespaceTwo\Configuration();
         $bundleThree = new \Slab\Tests\Bundle\Mocks\NamespaceCharlie\Configuration();
 
-        $this->stack = new \Slab\Bundle\Stack($bundleBase);
+        $this->stack = new \Slab\Bundle\Stack();
 
         $this->stack
+            ->pushBundle($bundleBase)
             ->pushBundle($bundleTwo)
             ->pushBundle($bundleThree);
     }

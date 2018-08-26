@@ -16,11 +16,12 @@ Use composer to include the package
 
 Make sure your SlabPHP bundle configuration object exists. SlabPHP has one built-in for it's default Bundle. That's the one you should use as the first one but of course it's not required if you're for some reason using this library not within a SlabPHP context.
 
-    $stack = new \Slab\Bundle\Stack(new \SlabPHP\Configuration());
+    $stack = new \Slab\Bundle\Stack();
     
 Then you can push bundle configuration objects for any other bundle you've created.
 
     $stack
+        ->pushBundle(new \SlabPHP\Configuration())
         ->pushBundle(new \My\Shared\Namespace\Configuration())
         ->pushBundle(new \My\Site\Configuration());
     
