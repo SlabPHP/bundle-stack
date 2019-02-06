@@ -53,7 +53,9 @@ abstract class Standard implements \Slab\Components\BundleInterface
      */
     public function __construct()
     {
-        $this->namespace = dirname(get_called_class());
+        $class = get_called_class();
+        $lastSlash = strrpos($class, '\\');
+        $this->namespace = substr($class, 0, $lastSlash);
 
         //This class expects to be at the root namespace
         $this->sourceDirectory = $this->getCurrentWorkingDirectory();
