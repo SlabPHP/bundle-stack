@@ -39,6 +39,10 @@ class Stack implements \Slab\Components\BundleStackInterface
     {
         $namespace = $bundle->getNamespace();
 
+        if (empty($namespace)) {
+            throw new \Exception("The bundle with class " . get_class($bundle) . " returned an empty namespace.");
+        }
+
         if (!empty($this->bundles[$namespace]))
         {
             throw new \Exception("The bundle with the namespace " . $namespace . " is already in the stack.");
